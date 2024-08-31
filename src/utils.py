@@ -23,8 +23,7 @@ def normalize_nodes(input_list, request_list_size=100):
             })
             result_dict.update(result.json())
         except Exception as ex:
-            print(ex)
+            print(f'count: {count}, input_list: {input_list[low_bound:high_bound]}, exception: {ex}')
         count += request_list_size
-    print(result_dict)
     return result_dict
 
